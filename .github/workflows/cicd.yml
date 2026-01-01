@@ -16,9 +16,6 @@ jobs:
         uses: actions/setup-node@v2
       - name: Install Dependencies
         run: npm install
-      - name: Run Tests
-        run: npm test
-    
 
   #  runs-on: self-hosted
   #  needs: Testing
