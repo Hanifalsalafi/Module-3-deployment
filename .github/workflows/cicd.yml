@@ -18,12 +18,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: npm install and test
-        run: npm install && npm test 
-
-
-
-
+      - name: Install & Test
+        run: |
+          npm ci
+          npm test
     #Deploy:
   #  runs-on: self-hosted
   #  needs: Testing
