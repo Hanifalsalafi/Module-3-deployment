@@ -17,12 +17,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test
+          
+      - name: Clean, Install & Test
+        run: |
+          rm -rf dist
+          npm install
+          npm test
 
   #Deploy:
   #  runs-on: self-hosted
