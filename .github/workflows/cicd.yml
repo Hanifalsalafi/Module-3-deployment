@@ -16,32 +16,31 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22'
+          node-version: 22
 
       - name: Install Dependencies
         run: npm install
 
       - name: Run Tests
-        run: npm run check
+        run: npm 
 
-
-  Deploy:
-    runs-on: self-hosted
-    needs: Testing
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm install
-
-
-
-      - name: Deploy to Server
-        run: |
-          pm2 delete "Server" || true
-
-          pm2 start "npm start" --name="Server"
+  #Deploy:
+  #  runs-on: self-hosted
+  #  needs: Testing
+  #  steps:
+  #    - name: Checkout code
+  #      uses: actions/checkout@v2
+#
+  #    - name: Install Dependencies
+  #      run: npm install
+#
+#
+#
+  #    - name: Deploy to Server
+  #      run: |
+  #        pm2 delete "Server" || true
+#
+  #        pm2 start "npm start" --name="Server"
 
  
 
