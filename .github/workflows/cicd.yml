@@ -18,13 +18,13 @@ jobs:
         with:
           node-version: 18
 
-      - name: Clean, Install & Test
-        run: |
-          rm -rf dist
-          npm install
-          npm test
+      - name: npm install and test
+        run: npm install && npm test 
 
-  #Deploy:
+
+
+
+    #Deploy:
   #  runs-on: self-hosted
   #  needs: Testing
   #  steps:
